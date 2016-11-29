@@ -68,12 +68,15 @@ nav a:hover{
 }
 
 /*Image slider*/
-.image_slider{
+.slide{
     width: 100%;
     border: 1px solid rgb(218,165,32);
-    min-height: 400px;
-    margin-top: 0.5em;
+    height: 400px;
     background-size: cover;
+}
+
+.image_slider{
+    margin-top: 0px;
 }
 
 .btn{
@@ -85,7 +88,7 @@ nav a:hover{
     display: inline-block;
     text-align: center;
     font-size: 28px;
-    top: 60%;
+    top: 55%;
 }
 .btn:hover{
     box-shadow: 0px 5px 5px rgba(0,0,0,0.26);
@@ -107,7 +110,7 @@ nav a:hover{
 
 @media screen and (max-width: 620px){
     .heading{
-        font-size: 1em;
+        font-size: 1.2em;
     }
     .logo_img{
         width: 40px;
@@ -128,10 +131,10 @@ nav a:hover{
     .navigation {
     z-index: 10;
    /* background-color: rgb(218,165,32);*/
-    width: 300px;
+    width: 200px;
     position: absolute;
     -webkit-transform: translate(-300px, 0);
-    transform: translate(-300px, 0);
+    transform: translate(-200px, 0);
     transition: transform 0.3s ease;
     }
 
@@ -145,8 +148,9 @@ nav a:hover{
     }
 
     .item {
-        z-index: 10;
+    z-index: 10;
     display: list-item;
+    background-color: #fff;
     border-bottom: 1px solid #E0E0E0;
     width: 100%;
     text-align: center;
@@ -157,6 +161,12 @@ nav a:hover{
         top: 40%;
     }
     .image_slider{
-        width: 100%;
+        margin-top: 0.5em;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .heading{
+        font-size: 0.8em;
     }
 }

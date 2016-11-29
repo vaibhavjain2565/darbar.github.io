@@ -11,7 +11,7 @@
 <body>
     <header class="head">
         <div class="inner_head">
-            <img src="logo.jpg" alt="logo" class="logo_img">
+            <img src="img/logo.jpg" alt="logo" class="logo_img">
             <h1 class="heading">Darbar Noor E Khawaja Gareeb Nawaz</h1>
             <a id="menu" class="header_menu">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -51,27 +51,26 @@
         drawer.classList.remove('open');
       });
 
-      var images=["picture1.jpg","picture2.jpeg","picture3.jpeg","picture4.jpeg","picture5.jpeg"];
+      var images=["img/picture1.jpg","img/picture2.jpeg","img/picture3.jpeg","img/picture4.jpeg","img/picture5.jpeg"];
       var index=0;
-      var slider=document.getElementById('slider');
       var img=document.getElementById('slide');
       var left_btn=document.getElementById("left_btn");
       var right_btn=document.getElementById("right_btn");
 
-      slider.style.backgroundImage='url('+images[index]+')';
+      slide.src=images[index];
 
       left_btn.addEventListener('click',function(){
           if(index==0)
             index=images.length;
             index--;
-            slider.style.backgroundImage='url('+images[index]+')';
+            slide.src=images[index];
       });
 
       right_btn.addEventListener('click',function(){
         if(index==images.length-1)
             index=-1
             index++;
-            slider.style.backgroundImage='url('+images[index]+')';
+            slide.src=images[index];
       })
 
     </script>
