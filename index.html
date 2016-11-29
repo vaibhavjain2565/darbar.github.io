@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Darbar Noor E Khawaja Gareeb Nawaz</title>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+<body>
+    <header class="head">
+        <div class="inner_head">
+            <img src="logo.jpg" alt="logo" class="logo_img">
+            <h1 class="heading">Darbar Noor E Khawaja Gareeb Nawaz</h1>
+            <a id="menu" class="header_menu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"></path>
+                </svg>
+            </a>
+        </div>
+    </header>
+     <nav class="navigation" id="navigation">
+            <ul class="list">
+                <li class="item"><a href="#">Home</a></li>
+                <li class="item"><a href="#">mission</a></li>
+                <li class="item"><a href="#">vision</a></li>
+                <li class="item"><a href="#">contact</a></li>
+                <li class="item"><a href="#">About</a></li>
+            </ul>
+    </nav>
+
+    <section class="image_slider" id="slider">
+        <a class="left_btn btn" id="left_btn">❮</a>
+        <img src="" class="slide" id="slide">
+        <a class="right_btn btn" id="right_btn">❯</a>
+    </section>
+
+
+
+    <script >
+      var menu = document.querySelector('#menu');
+      var main = document.querySelector('body');
+      var drawer = document.querySelector('.navigation');
+
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+
+      var images=["picture1.jpg","picture2.jpeg","picture3.jpeg","picture4.jpeg","picture5.jpeg"];
+      var index=0;
+      var slider=document.getElementById('slider');
+      var img=document.getElementById('slide');
+      var left_btn=document.getElementById("left_btn");
+      var right_btn=document.getElementById("right_btn");
+
+      slider.style.backgroundImage='url('+images[index]+')';
+
+      left_btn.addEventListener('click',function(){
+          if(index==0)
+            index=images.length;
+            index--;
+            slider.style.backgroundImage='url('+images[index]+')';
+      });
+
+      right_btn.addEventListener('click',function(){
+        if(index==images.length-1)
+            index=-1
+            index++;
+            slider.style.backgroundImage='url('+images[index]+')';
+      })
+
+    </script>
+</body>
+</html>
